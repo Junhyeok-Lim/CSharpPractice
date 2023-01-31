@@ -9,7 +9,9 @@ namespace CSharpPractice
         static double numberTwo = 12.34;
         static void Main(string[] args)
         {
-            
+            BankAccount bankAccount = new BankAccount();
+            bankAccount.AddToBalance(100);
+            Console.WriteLine(bankAccount.Balance);
             Console.ReadLine();
         }
     }
