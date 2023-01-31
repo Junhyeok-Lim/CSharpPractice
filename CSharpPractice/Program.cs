@@ -5,9 +5,14 @@ namespace CSharpPractice
 {
     class Program
     {
-        static void main(string[] args)
+        static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int numberOne;
+            numberOne = 23;
+            Console.WriteLine(numberOne);
+            var message = Console.ReadLine();
+            Console.WriteLine($"Echo:{message}");
+            Console.ReadLine();
         }
     }
 }
