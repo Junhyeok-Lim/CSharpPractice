@@ -17,7 +17,7 @@ namespace CSharpPractice.Classes
                     return balance;
                 return 1000000;
             }
-            private set
+            protected set
             {
                 if(value>0)
                    balance = value;
@@ -25,7 +25,7 @@ namespace CSharpPractice.Classes
                   balance = 0;
             }
         }
-        public BankAccount()
+        public BankAccount() //ctor tap twice
         {
             Balance = 100;
         }
@@ -35,6 +35,13 @@ namespace CSharpPractice.Classes
         {
             Balance += balanceToBeAdded;
             return Balance;
+        }
+    }
+    public class ChildBankAccount : BankAccount
+    {
+        public ChildBankAccount()
+        {
+            Balance = 10;
         }
     }
 }
