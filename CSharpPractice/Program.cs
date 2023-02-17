@@ -9,7 +9,11 @@ namespace CSharpPractice
         static double numberTwo = 12.34;
         static void Main(string[] args)
         {
-            BankAccount bankAccount = new BankAccount();
+            double[] numbers = new double[] { 1, 2, 3, 42, 42154 };
+            var result = SimpleMath.Add(numbers);
+            Console.WriteLine(result);
+
+            BankAccount bankAccount = new BankAccount(1000);
             bankAccount.AddToBalance(100);
             Console.WriteLine(bankAccount.Balance);
 
@@ -24,6 +28,16 @@ namespace CSharpPractice
         public static double Add(double n1, double n2)
         {
             return n1 + n2;
+        }
+
+        public static double Add(double[] numbers) //메소드 오버로딩(같은 이름을 갖고 다른 기능을 하는 함수)
+        {
+            double result = 0;
+            foreach(double d in numbers)
+            {
+                result += d;
+            }
+            return result;
         }
 
     }

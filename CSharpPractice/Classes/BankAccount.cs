@@ -29,6 +29,12 @@ namespace CSharpPractice.Classes
         {
             Balance = 100;
         }
+
+        public BankAccount(double initialBalance)
+        {
+            Balance = initialBalance;
+        }
+
        
 
         public double AddToBalance(double balanceToBeAdded)
